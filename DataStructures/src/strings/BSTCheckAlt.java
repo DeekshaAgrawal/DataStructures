@@ -2,7 +2,7 @@ package strings;
 class Node
 {
     int data;
-    Node left, right;
+    Node1 left, right;
  
     public Node(int item)
     {
@@ -14,10 +14,10 @@ class Node
 public class BSTCheckAlt
 {
     // Root of the Binary Tree
-    Node root;
+    Node1 root;
  
     // To keep tract of previous node in Inorder Traversal
-    Node prev;
+    Node1 prev;
  
     boolean isBST()  {
         prev = null;
@@ -26,7 +26,7 @@ public class BSTCheckAlt
  
     /* Returns true if given search tree is binary
        search tree (efficient version) */
-    boolean isBST(Node node)
+    boolean isBST(Node1 node)
     {
         // traverse the tree in inorder fashion and
         // keep a track of previous node
@@ -48,11 +48,11 @@ public class BSTCheckAlt
     public static void main(String args[])
     {
         BSTCheckAlt tree = new BSTCheckAlt();
-        tree.root = new Node(4);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(5);
-        tree.root.left.left = new Node(1);
-        tree.root.left.right = new Node(3);
+        tree.root = new Node1(4);
+        tree.root.left = new Node1(2);
+        tree.root.right = new Node1(5);
+        tree.root.left.left = new Node1(1);
+        tree.root.left.right = new Node1(3);
  
         if (tree.isBST())
             System.out.println("IS BST");

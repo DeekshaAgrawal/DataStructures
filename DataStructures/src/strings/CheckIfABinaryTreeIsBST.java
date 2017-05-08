@@ -5,12 +5,13 @@ package strings;
 
 /* Class containing left and right child of current
 node and key value*/
-class Node
+class Node1
 {
 	int data;
-	Node left, right;
+	Node1 left;
+	Node1 right;
 
-	public Node(int item)
+	public Node1(int item)
 	{
 		data = item;
 		left = right = null;
@@ -20,7 +21,7 @@ class Node
 public class CheckIfABinaryTreeIsBST
 {
 	//Root of the Binary Tree
-	Node root;
+	Node1 root;
 
 	/* can give min and max value according to your code or
 	can write a function to find min and max value of tree. */
@@ -34,7 +35,7 @@ public class CheckIfABinaryTreeIsBST
 
 	/* Returns true if the given tree is a BST and its
 	values are >= min and <= max. */
-	boolean isBSTUtil(Node node, int min, int max)
+	boolean isBSTUtil(Node1 node, int min, int max)
 	{
 		/* an empty tree is BST */
 		if (node == null)
@@ -55,11 +56,11 @@ public class CheckIfABinaryTreeIsBST
 	public static void main(String args[])
 	{
 		CheckIfABinaryTreeIsBST tree = new CheckIfABinaryTreeIsBST();
-		tree.root = new Node(4);
-		tree.root.left = new Node(3);
-		tree.root.right = new Node(5);
-		tree.root.left.left = new Node(1);
-		tree.root.left.right = new Node(2);
+		tree.root = new Node1(4);
+		tree.root.left = new Node1(3);
+		tree.root.right = new Node1(5);
+		tree.root.left.left = new Node1(1);
+		tree.root.left.right = new Node1(2);
 
 		if (tree.isBST())
 			System.out.println("IS BST");
